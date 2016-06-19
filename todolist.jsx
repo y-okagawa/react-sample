@@ -34,11 +34,11 @@ class TodoList extends React.Component {
     this.setState({todos: todos})
   }
 
-  handleOnClickRemove(todo) {
-    var index = todo.id
-    var todos = this.state.todos
-    todos.splice(index, 1)
-    this.setState({todos: todos})
+  handleOnClickRemove(id) {
+    this.setState({todos: this.state.todos.filter((todo) => {
+        return todo.id !== id;
+      })
+    })
   }
 
   render() {
@@ -66,8 +66,8 @@ class Todo extends React.Component {
   }
 
   handleOnClickRemove() {
-    var todo = this.props.todo
-    this.props.handleOnClickRemove(todo)
+    var id = this.props.todo.id
+    this.props.handleOnClickRemove(id)
   }
 
   render() {
