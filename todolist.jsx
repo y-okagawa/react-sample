@@ -46,9 +46,9 @@ class TodoList extends React.Component {
     var handlerRemove = this.handleOnClickRemove.bind(this);
     return (
       <div>
-       <input type="text" ref="todo" />&nbsp;
-       <button onClick={this.handleOnClick.bind(this)}>TODO追加</button>
-       <ul>{
+       <input type="text" id="addTodoText" ref="todo" />&nbsp;
+       <button onClick={this.handleOnClick.bind(this)} id="addTodoBtn">TODO追加</button>
+       <ul className="todos">{
         this.state.todos.map(function(todo) {
           return <Todo key={todo.id} todo={todo} handleOnClickComplete={handlerComplete} handleOnClickRemove={handlerRemove} />
         })
@@ -79,8 +79,8 @@ class Todo extends React.Component {
       textDecoration: textdecoration
     }
     return (
-      <li>
-        <span style={style}>{this.props.todo.name}</span>&nbsp;
+      <li className="todo">
+        <span className="todo-text" style={style}>{this.props.todo.name}</span>&nbsp;
         <button onClick={this.handleOnClickComplete.bind(this)}>{(this.props.todo.complete)? '取り消し' : '完了'}</button>&nbsp;
         <button  onClick={this.handleOnClickRemove.bind(this)}>削除</button>
       </li>

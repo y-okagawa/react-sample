@@ -1,0 +1,60 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (9.0.5)
+    childprocess (0.5.9)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.1)
+    diff-lcs (1.2.5)
+    ffi (1.9.10)
+    jar_wrapper (0.1.8)
+      zip
+    method_source (0.8.2)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.4.0)
+      byebug (~> 9.0)
+      pry (~> 0.10)
+    pry-doc (0.8.0)
+      pry (~> 0.9)
+      yard (~> 0.8)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    rubyzip (1.2.0)
+    selenium (0.2.11)
+      jar_wrapper
+    selenium-webdriver (2.53.3)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
+    slop (3.6.0)
+    websocket (1.2.3)
+    yard (0.8.7.6)
+    zip (2.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pry
+  pry-byebug
+  pry-doc
+  rspec
+  selenium
+  selenium-webdriver
+
+BUNDLED WITH
+   1.10.6
